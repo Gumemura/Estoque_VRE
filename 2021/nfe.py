@@ -3,11 +3,21 @@ import xlrd
 f = open("items.xml", "w")
 
 # Give the location of the file
+<<<<<<< HEAD
 loc = ("Estoque VRE 2021.xlsx")
  
 # To open Workbook
 wb = xlrd.open_workbook(loc)
 sheet = wb.sheet_by_name("Saida")
+=======
+loc = ("nfe_teste.xlsx")
+ 
+# To open Workbook
+wb = xlrd.open_workbook(loc)
+
+sheet = wb.sheet_by_name("Teste")
+print(sheet.cell_value(3,0))
+>>>>>>> 5d3ba544f9c56fd9ef6c8bc11b1833b8d4f6f8d8
 
 num_rows= sheet.nrows
 
