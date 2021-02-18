@@ -3,11 +3,13 @@ import xlrd
 f = open("items.xml", "w")
 
 # Give the location of the file
-loc = ("estoque.xlsx")
+loc = ("nfe_teste.xlsx")
  
 # To open Workbook
 wb = xlrd.open_workbook(loc)
-sheet = wb.sheet_by_index(0)
+
+sheet = wb.sheet_by_name("Teste")
+print(sheet.cell_value(3,0))
 
 num_rows= sheet.nrows
 
